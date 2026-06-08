@@ -54,5 +54,9 @@ try {
 
 } catch (Exception $e) {
     $db->rollBack();
-    echo json_encode(['error' => 'Ошибка при оформлении заказа']);
+    $debug = getenv('APP_DEBUG') === 'true';
+    echo json_encode([
+        'error' => 'Ошибка при оформлении заказа',
+        'detail' => $debug ? $e->getMessage() : null
+    ]);
 }
