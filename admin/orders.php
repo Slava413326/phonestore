@@ -82,7 +82,7 @@ $statusMap = [
                   <form method="POST" style="display:flex;gap:6px;align-items:center">
                     <input type="hidden" name="order_id" value="<?= $o['id'] ?>">
                     <select name="status" class="filters__select" style="border-radius:6px;padding:6px 28px 6px 10px;font-size:13px">
-                      <?php foreach($statusMap as $val => [$, $label]): ?>
+                      <?php foreach($statusMap as $val => [$_cls, $label]): ?>
                         <option value="<?= $val ?>" <?= $o['status'] === $val ? 'selected' : '' ?>><?= $label ?></option>
                       <?php endforeach; ?>
                     </select>
