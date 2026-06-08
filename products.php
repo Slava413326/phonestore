@@ -43,8 +43,6 @@ $products = $stmt->fetchAll();
 
 $brands  = $db->query("SELECT DISTINCT brand FROM products ORDER BY brand")->fetchAll(PDO::FETCH_COLUMN);
 ?>
-$brands  = $db->query("SELECT DISTINCT brand FROM products ORDER BY brand")->fetchAll(PDO::FETCH_COLUMN);
-?>
 
 <section class="section">
   <div class="container">
